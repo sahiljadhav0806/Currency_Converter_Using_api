@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/background_crop"
+    tools:context=".MainActivity">
+
+  <ImageView
+      android:id="@+id/imageView3"
+      android:layout_width="140dp"
+      android:layout_height="140dp"
+      app:srcCompat="@drawable/crop_logo" />
+
+
+  <TextView
+      android:id="@+id/name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="160dp"
+      android:fontFamily="sans-serif-condensed-light"
+      android:gravity="center"
+      android:text="Ecoinify"
+      android:textColor="#4557BA"
+      android:textSize="60dp"
+      android:textStyle="bold" />
+
+  <LinearLayout
+      android:id="@+id/enterll"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/name"
+      android:layout_marginTop="30dp"
+      android:orientation="horizontal"
+      android:layout_marginStart="10dp">
+
+    <TextView
+        android:id="@+id/enterAm"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:fontFamily="sans-serif"
+        android:text="Enter Amount :"
+        android:textColor="#190E2C"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/AmountToConvert"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:inputType="number"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:textColor="#000000"/>
+
+  </LinearLayout>
+
+
+
+
+
+  <LinearLayout
+      android:id="@+id/firstll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="15dp"
+      android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
+      android:layout_below="@id/enterll">
+
+    <TextView
+        android:id="@+id/Textfrom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Convert From:"
+        android:textSize="18dp"
+        android:layout_weight="1.0"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/TextTo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Convert To:"
+        android:textSize="18dp"
+        android:layout_weight="1.0"
+        android:textColor="#000000" />
+
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/Secondll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_below="@id/firstll"
+      android:layout_marginTop="10dp">
+
+    <TextView
+        android:id="@+id/Convert_from_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="10dp"
+        android:hint="select Country"
+        android:text=""
+        android:background="@android:drawable/editbox_background"
+        android:textSize="14dp"
+        android:textColor="#000000"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+
+    <TextView
+        android:id="@+id/Convert_To_select"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:layout_marginStart="10dp"
+        android:hint="select Country"
+        android:text=""
+        android:background="@android:drawable/editbox_background"
+        android:textSize="14dp"
+        android:textColor="#000000"
+        android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+
+
+
+
+
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/convert"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/Secondll"
+      android:layout_marginStart="140dp"
+      android:layout_marginTop="35dp"
+      android:backgroundTint="#0ABAEF"
+      android:text="Convert"
+      android:textColor="@color/white"
+      android:textStyle="bold" />
+
+
+  <LinearLayout
+      android:id="@+id/lastll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/convert"
+      android:layout_marginTop="4dp"
+      android:orientation="horizontal"
+      android:layout_marginStart="60dp">
+
+    <TextView
+        android:id="@+id/ConvertedAm"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:fontFamily="sans-serif"
+        android:text="Converted Amount:"
+        android:textColor="#190E2C"
+        android:textSize="20dp"
+         />
+
+    <TextView
+        android:id="@+id/converted_text"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_below="@id/convert"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+
+         />
+
+
+  </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
